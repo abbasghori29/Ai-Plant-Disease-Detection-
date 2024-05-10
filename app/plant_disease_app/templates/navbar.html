@@ -1,0 +1,47 @@
+<nav
+  class="navbar navbar-expand-lg bg-primary navbar-dark shadow-sm py-3 py-lg-0 px-3 px-lg-5"
+>
+  <a href="{% url 'home' %}" class="navbar-brand d-flex d-lg-none">
+    <h1 class="m-0 display-4 text-secondary">
+      <span class="text-white">Leaf</span>Check
+    </h1>
+  </a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarCollapse"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="navbar-nav mx-auto py-0">
+      <a
+        href="{% url 'home' %}"
+        class="nav-item nav-link {% if request.path == '/' %}active{% endif %}"
+        >Home</a
+      >
+      <a
+        href="{% url 'about' %}"
+        class="nav-item nav-link {% if request.path == '/about' %}active{% endif %}"
+        >About</a
+      >
+      <a
+        href="{% url 'services' %}"
+        class="nav-item nav-link {% if request.path == '/services' %}active{% endif %}"
+        >Services</a
+      >
+
+      <a
+        href="{% url 'contact' %}"
+        class="nav-item nav-link {% if request.path == '/contact' %}active{% endif %}"
+        >Contact</a
+      >
+      <a
+        href="{% url 'diseasePage' %}"
+        class="nav-item nav-link {% if request.path == '/diseasePage' %}active{% endif %}"
+        >Disease Detector</a
+      >
+    </div>
+  </div>
+</nav>
